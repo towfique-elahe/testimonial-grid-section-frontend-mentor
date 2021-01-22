@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Barlow Semi Condensed;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.attribution {
+  text-align: center;
+  font-size: 11px;
+  color: hsl(228, 45%, 44%);
+}
+body {
+  width: 100%;
+  height: fit-content;
+  background-color: #edf2f8;
+  display: flex;
+  justify-content: center;
+}
+h3 span,
+q {
+  color: rgb(174, 174, 174);
+  font-weight: lighter;
+  font-size: 11px;
+}
+p span {
+  font-size: 20px;
+}
+.daniel {
+  grid-area: daniel;
+}
+.jonathan {
+  grid-area: jonathan;
+}
+.jeanette {
+  grid-area: jeanette;
+}
+.patrick {
+  grid-area: patrick;
+}
+.kira {
+  grid-area: kira;
+}
+.attribution {
+  grid-area: attribution;
+}
+.container {
+  width: 90%;
+  max-width: 1440px;
+  height: 100vh;
+  display: grid;
+  grid-template:
+    "daniel daniel jonathan kira"
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira"
+    "jeanette patrick patrick kira"
+    "attribution attribution attribution attribution";
+  gap: 30px;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+.container .card {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.207) 0px 0px 10px;
+  padding: 20px 30px;
+  width: auto;
+  height: fit-content;
+}
+.container .daniel {
+  background-color: #733fc8;
+  color: white;
+  position: relative;
+}
+.container .daniel #svg {
+  position: absolute;
+  top: 0px;
+  right: 10%;
+  width: 80px;
+}
+.container .jonathan {
+  background-color: #49556b;
+  color: white;
+}
+.container .jeanette {
+  background-color: #ffffff;
+  color: black;
+}
+.container .patrick {
+  background-color: #181f2f;
+  color: white;
+}
+.container .kira {
+  background-color: #ffffff;
+  color: black;
+}
+.profile {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+.profile img {
+  border-radius: 50%;
+  border: greenyellow solid 2px;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    grid-template:
+      "daniel daniel jonathan"
+      "jeanette patrick patrick"
+      "kira kira kira"
+      "attribution attribution attribution";
+    padding-top: 30px;
+  }
+  .container .daniel #svg {
+    position: absolute;
+    top: 0px;
+    right: 10%;
+    width: 70px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    grid-template:
+      "daniel"
+      "jonathan"
+      "jeanette"
+      "patrick"
+      "kira"
+      "attribution";
+    padding-top: 20px;
+    gap: 20px;
+  }
+  .container .daniel #svg {
+    position: absolute;
+    top: 0px;
+    right: 10%;
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .container {
+    grid-template:
+      "daniel"
+      "jonathan"
+      "jeanette"
+      "patrick"
+      "kira"
+      "attribution";
+    padding-top: 20px;
+    gap: 20px;
+  }
+  .container .card {
+    min-width: 300px;
+  }
+  .container .daniel #svg {
+    position: absolute;
+    top: 0px;
+    right: 10%;
+    width: 50px;
+  }
+}
